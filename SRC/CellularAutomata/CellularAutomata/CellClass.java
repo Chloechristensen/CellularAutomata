@@ -1,25 +1,38 @@
 package CellularAutomata.CellularAutomata;
 
 public class CellClass {
-    private int strength = 0;
-    public int x;
-    public int y;
-    public int id;
+    public int strength;
+    int x;
+    int y;
+    int id;
 
-    public CellClass(int strength, int x, int y, int id) {
-    }
-
-
-    private void Strength(int strength) {
-        if(strength > 0) {
-            this.strength = strength;
+    public void setStrength(int Strength){
+        if(Strength > 0) {
+            this.strength = Strength;
         }
         else {
             this.strength = 0;
         }
     }
 
-    public void setx(int x) {
+    public int getStrength(){
+        return this.strength;
+    }
+
+    public void setId(){
+        if(id > 0){
+            this.id = id;
+        }
+        else {
+            this.id = 0;
+        }
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public void setx(){
         if(x > 0) {
             this.x = x;
         }
@@ -28,16 +41,30 @@ public class CellClass {
         }
     }
 
-    public void sety(int y) {
-        this.y = 0;
+    public int getx(){
+        return this.x;
     }
 
-    public void setid(int id){
-        this.id = 0;
+    public void sety(){
+        if(y > 0){
+            this.y = y;
+        }
+        else{
+            this.y = 0;
+        }
     }
 
-    public void interactNeighbours() {
-        Array
+    public CellClass(int strength, int x, int y, int id) {
+        int strength = 0;
+        int id = 0;
+        int x = 0;
+        int y = 0;
     }
 
+    public static void CellClass(String[] args) {
+        CellClass Cas = new CellClass(setStrength(),setId(),setx(),sety());
+        System.out.println(Cas);
+
+    public void interactNeighbours(ArrayList<Cell> neighbours) {
+    }
 }
