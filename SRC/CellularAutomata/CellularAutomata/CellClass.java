@@ -6,7 +6,7 @@ public class CellClass {
     int y;
     int id;
 
-    public void setStrength(int Strength){
+    public void setStrength(int Strength){ // methods or functions
         if(Strength > 0) {
             this.strength = Strength;
         }
@@ -54,16 +54,19 @@ public class CellClass {
         }
     }
 
-    public CellClass(int strength, int x, int y, int id) {
-        int strength = 0;
-        int id = 0;
+    public CellClass() {
+        this.strength = 0; //when you set it there are no input values becasue this is the default constructor
+        this.id = 0;
         int x = 0;
         int y = 0;
     }
 
-    public static void CellClass(String[] args) {
-        CellClass Cas = new CellClass(setStrength(),setId(),setx(),sety());
-        System.out.println(Cas);
+    public CellClass(int strength, int id, int x, int y) { // this is a constructor because it has the same name as the class
+        this.strength = strength; // this one takes input values becasue it is not a default and has to take versions of the instance variables that are altered.
+        this.id = id;
+        this.x = x;
+        this.y = y;
+    }
 
     public void interactNeighbours(ArrayList<Cell> neighbours) {
     }
